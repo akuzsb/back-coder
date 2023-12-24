@@ -1,4 +1,3 @@
-import { time } from 'node:console';
 import fs from 'node:fs/promises';
 class ProductManager {
     #products = [];
@@ -10,7 +9,7 @@ class ProductManager {
         this.#path = path;
     }
 
-    async getProducts () {
+    async getProducts() {
         let products = await fs.readFile(this.#path, 'utf-8');
         this.#products = products ? JSON.parse(products) : [];
         return this.#products;
@@ -23,15 +22,15 @@ class ProductManager {
         }
         return product;
     }
-    
-    async getIdProduct () {
+
+    async getIdProduct() {
         let products = await this.getProducts();
         if (!products.length) return 0;
         this.#id = Math.max(...products.map(p => p.id));
         return this.#id;
     }
-    
-    async addProduct (product) {
+
+    async addProduct(product) {
         if (product.code && this.#products.find(p => p.code === product.code)) {
             throw new Error('No se puede agregar un producto con el mismo código');
         }
@@ -44,17 +43,17 @@ class ProductManager {
         await this.saveProducts(products);
     }
 
-    async saveProducts (products) {
+    async saveProducts(products) {
         await fs.writeFile(this.#path, JSON.stringify(products));
     }
 
-    async deleteProduct (id) {
+    async deleteProduct(id) {
         let products = await this.getProducts();
         products = products.filter(p => p.id !== id);
         await this.saveProducts(products);
     }
 
-    async updateProduct ({id, product}) {
+    async updateProduct({ id, product }) {
         let products = await this.getProducts();
         const index = products.findIndex(p => p.id === id);
         if (index === -1) {
