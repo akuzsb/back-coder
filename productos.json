@@ -1,1 +1,72 @@
-[]
+[{
+    "title" : "Remera",
+    "price" : 1000,
+    "thumbnail" : "",
+    "id" : 1,
+    "code" : "1A",
+    "stock" : 10
+},
+{
+    "title" : "Pantalon",
+    "price" : 2000,
+    "thumbnail" : "",
+    "id" : 2,
+    "code" : "2A",
+    "stock" : 10
+}, {
+    "title" : "Zapatillas",
+    "price" : 3000,
+    "thumbnail" : "",
+    "id" : 3,
+    "code" : "3A",
+    "stock" : 10
+}, {
+    "title" : "Campera",
+    "price" : 4000,
+    "thumbnail" : "",
+    "id" : 4,
+    "code" : "4A",
+    "stock" : 10
+}, {
+    "title" : "Buzo",
+    "price" : 5000,
+    "thumbnail" : "",
+    "id" : 5,
+    "code" : "5A",
+    "stock" : 10
+}, {
+    "title" : "Gorra",
+    "price" : 6000,
+    "thumbnail" : "",
+    "id" : 6,
+    "code" : "6A",
+    "stock" : 10
+}, {
+    "title" : "Medias",
+    "price" : 7000,
+    "thumbnail" : "",
+    "id" : 7,
+    "code" : "7A",
+    "stock" : 10
+}, {
+    "title" : "Bufanda",
+    "price" : 8000,
+    "thumbnail" : "",
+    "id" : 8,
+    "code" : "8A",
+    "stock" : 10
+}, {
+    "title" : "Guantes",
+    "price" : 9000,
+    "thumbnail" : "",
+    "id" : 9,
+    "code" : "9A",
+    "stock" : 10
+}, {
+    "title" : "Bolso",
+    "price" : 10000,
+    "thumbnail" : "",
+    "id" : 10,
+    "code" : "10A",
+    "stock" : 10
+}]
