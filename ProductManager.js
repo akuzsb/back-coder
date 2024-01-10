@@ -1,5 +1,5 @@
 import fs from 'node:fs/promises';
-class ProductManager {
+export class ProductManager {
     #products = [];
     #id = 0;
     #path = '';
@@ -15,8 +15,9 @@ class ProductManager {
         return this.#products;
     }
 
-    getProductById = (id) => {
-        const product = this.#products.find(p => p.id === id);
+    getProductById = async (id) => {
+        const products = await this.getProducts();
+        const product = products.find(p => p.id == id);
         if (!product) {
             throw new Error('Not found');
         }
